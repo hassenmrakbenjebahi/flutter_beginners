@@ -9,7 +9,7 @@ void main() => runApp(MaterialApp(
     ),
     body: Center(
       child: Text(
-        'hello, ninjas!',
+        'hello, world!',
         style: TextStyle(
           fontSize: 20.0,
           fontWeight: FontWeight.bold,
