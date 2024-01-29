@@ -14,7 +14,13 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.red[600]
       ),
       body: Center(
-        child: Image.asset('assets/space3.jpg'),
+        child: ElevatedButton.icon(onPressed: (){},
+         icon: Icon(Icons.email),
+         label: Text("mail me"),
+         style: ElevatedButton.styleFrom(
+          backgroundColor: Color.fromARGB(239, 173, 245, 5)
+         ),
+         ) ,
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[600],
