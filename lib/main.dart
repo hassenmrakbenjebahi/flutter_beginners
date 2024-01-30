@@ -75,7 +75,7 @@ class Card extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             Text(
-              '8',
+              '12',
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 fontWeight: FontWeight.bold,
