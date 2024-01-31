@@ -4,16 +4,33 @@ void main() => runApp(MaterialApp(
   home: Card(),
 ));
 
-class Card extends StatelessWidget {
+class Card extends StatefulWidget {
+  @override
+  _NinjaCardState createState() => _NinjaCardState();
+}
+
+class _NinjaCardState extends State<Card> {
+
+  int fLevel = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text('flutter ID Card'),
+        title: Text('ID Card'),
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            fLevel += 1;
+          });
+        },
+        backgroundColor: Colors.grey[800],
+        child: Icon(Icons.add),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
@@ -57,7 +74,7 @@ class Card extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             Text(
-              'tunis ',
+              'ariana, tunis',
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 fontWeight: FontWeight.bold,
@@ -67,7 +84,7 @@ class Card extends StatelessWidget {
             ),
             SizedBox(height: 30.0),
             Text(
-              'CURRENT flutter LEVEL',
+              'CURRENT FLUTTER LEVEL',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2.0,
@@ -75,7 +92,7 @@ class Card extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             Text(
-              '12',
+              '$fLevel',
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 fontWeight: FontWeight.bold,
