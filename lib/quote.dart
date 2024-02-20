@@ -20,6 +20,6 @@ class Quote {
   // constructor with named parameters
   // & automatically assigns named arguments to class properties
 
-  Quote({ this.text, this.author });
+  Quote({ required this.text,required this.author });
 
 }
